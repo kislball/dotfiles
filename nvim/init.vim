@@ -22,7 +22,7 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
-Plug 'junegunn/seoul256.vim'
+#Plug 'junegunn/seoul256.vim'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tc50cal/vim-terminal'

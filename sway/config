@@ -91,7 +91,7 @@ exec_always {
 
     # Kill focused window
     bindsym $mod+Shift+q kill
-
+		bindsym Print exec grim -g "$(slurp)" - | wl-copy
     # Start your launcher
     bindsym $mod+d exec $menu
 
