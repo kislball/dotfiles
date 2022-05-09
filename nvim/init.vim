@@ -22,7 +22,7 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
-#Plug 'junegunn/seoul256.vim'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tc50cal/vim-terminal'
@@ -34,7 +34,8 @@ Plug 'mattn/emmet-vim'
 
 call plug#end()
 
-colo seoul256
+colorscheme onehalflight
+#let g:airline_theme='onehalfdark'
 
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-t> :TerminalSplit bash<CR>
