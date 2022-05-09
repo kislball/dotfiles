@@ -12,7 +12,7 @@ default_border none
 #exec "setxkbmap -option 'grp:alt_shift_toggle' -layout us,ru -variant ,qwerty"
 
 input "type:keyboard" {
-		xkb_layout us,ru
+	xkb_layout us,ru
     xkb_variant qwerty
     xkb_options grp:win_space_toggle
 }
@@ -35,6 +35,8 @@ set $term alacritty
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 gaps inner 15
 gaps outer 20
+gaps top 5
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -225,7 +227,10 @@ exec_always {
   # gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 }
 
+bindsym $mod+Shift+p exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
+
 bar {
-	swaybar_command waybar
+   swaybar_command waybar
 }
+
 include /etc/sway/config.d/*

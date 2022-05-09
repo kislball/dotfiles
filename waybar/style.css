@@ -1,0 +1,33 @@
+.modules-right, .modules-left, .modules-center {
+  margin-top: 10px;
+}
+
+.modules-right {
+  margin-right: 35px;
+}
+
+.modules-left {
+  margin-left: 35px;
+}
+
+window#waybar {
+  background: none;
+}
+
+.modules-right * {
+	margin-left: 20px;
+}
+
+#workspaces button {
+	padding: 0;
+	border-radius: 0;
+}
+
+#workspaces button.focused {
+	background: rgba(0,0,0,0.2);
+}
+
+#mode {
+  margin-left: 30px;
+  
+}
