@@ -32,7 +32,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu dmenu_run -l 10
 gaps inner 15
 gaps outer 20
 gaps top 5
@@ -90,7 +90,7 @@ exec_always {
 #
     # Start a terminal
     bindsym $mod+Return exec $term
-
+    bindsym Alt+F4 kill
     # Kill focused window
     bindsym $mod+Shift+q kill
 		bindsym Print exec grim -g "$(slurp)" - | wl-copy
