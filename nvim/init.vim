@@ -22,7 +22,7 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'EdenEast/nightfox.nvim', { 'tag': 'v1.0.0' } 
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tc50cal/vim-terminal'
@@ -31,11 +31,14 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mattn/emmet-vim'
+Plug 'tribela/vim-transparent'
 
 call plug#end()
 
-colorscheme onehalflight
+#colorscheme onehalflight
 #let g:airline_theme='onehalfdark'
+colorscheme nightfox
+TransparentEnable
 
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-t> :TerminalSplit bash<CR>
