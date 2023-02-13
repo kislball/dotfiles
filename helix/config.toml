@@ -1,0 +1,5 @@
+theme = "base16_terminal"
+
+[editor]
+mouse = false
+line-number = "relative"

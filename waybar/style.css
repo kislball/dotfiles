@@ -1,0 +1,108 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+.modules-center {
+    background: #1d1f21;
+    min-width: 200px;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.modules-right {
+    background: #1d1f21;
+    color: white;
+    padding-right: 0;
+    padding-left: 10px;
+    margin-right: 43px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+#workspaces {
+    margin-top: 20px;
+    margin-left: 43px;
+    border-radius: 10px;
+    background: #1d1f21;
+}
+
+#workspaces button:hover {
+    border: none;
+}
+
+#workspaces button:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#workspaces button:last-child {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#workspaces button {
+    padding: 5px 10px;
+    font-weight: 600;
+    background: transparent;
+    color: white;
+}
+
+#workspaces button.focused {
+    background: #2f3236;
+}
+
+#mode {
+    background: #2f3236;
+    border-bottom: 3px solid white;
+}
+
+#battery {
+    background-color: #ffffff;
+    color: black;
+}
+
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
