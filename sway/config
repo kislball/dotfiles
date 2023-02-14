@@ -38,7 +38,8 @@ input "type:keyboard" {
 # exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 gaps inner 10
-gaps outer 30
+gaps outer 20
+gaps top 10
 
 ### Output configuration
 #
