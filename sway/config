@@ -18,17 +18,17 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu ulauncher
 
+for_window [class="[Uu]launcher"] border none
 bindsym Print exec grim -g "$(slurp)" - | wl-copy
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 default_border pixel 4
-default_floating_border pixel 4  
+default_floating_border pixel 4 
 client.focused #b5bd68 #b5bd68 #dddddd #b5bd68
 client.focused_inactive #222222 #222222 #dddddd #222222
 client.unfocused #222222 #222222 #dddddd #222222
-
 input "type:keyboard" {
 	xkb_layout ru,us
 	xkb_variant qwerty
