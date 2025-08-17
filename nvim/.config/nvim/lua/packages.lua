@@ -9,5 +9,6 @@ package_urls = {
 	{ src = "https://github.com/stevearc/aerial.nvim" },
 	{ src = "https://github.com/stevearc/dressing.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+	{ src = "https://github.com/rebelot/kanagawa.nvim" },
 	-- { src = "https://github.com/shaunsingh/nord.nvim" },
 }

@@ -22,6 +22,10 @@ vim.keymap.set("n", "<leader>t", ":terminal<CR>", {
 	desc = "Open terminal",
 })
 
+vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", {
+	desc = "Open terminal",
+})
+
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {
 	desc = "Go to definition",
 })

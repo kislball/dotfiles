@@ -1,4 +1,4 @@
- minis = {
+minis = {
 	"pick",
 	"comment",
 	"surround",
@@ -11,6 +11,8 @@
 	"icons",
 	"pairs",
 	"tabline",
+	"cursorword",
+	"notify",
 }
 
 for _, name in ipairs(minis) do
