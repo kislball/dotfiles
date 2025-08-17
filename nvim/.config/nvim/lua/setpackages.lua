@@ -5,3 +5,5 @@ require("which-key").setup({ preset = "helix" })
 for _, name in ipairs(minis) do
 	require(string.format("mini.%s", name)).setup()
 end
+
+require("dressing").setup()

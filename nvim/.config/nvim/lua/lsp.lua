@@ -3,6 +3,9 @@ local coq = require("coq")
 
 vim.g.coq_settings = {
 	auto_start = "shut-up",
+	completion = {
+		skip_after = { "[", "]", "{", "}", " " },
+	},
 }
 
 local servers = {

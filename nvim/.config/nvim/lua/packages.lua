@@ -7,5 +7,7 @@ package_urls = {
 	{ src = "https://github.com/ms-jpq/coq.artifacts" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
 	{ src = "https://github.com/stevearc/aerial.nvim" },
+	{ src = "https://github.com/stevearc/dressing.nvim" },
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
 	-- { src = "https://github.com/shaunsingh/nord.nvim" },
 }

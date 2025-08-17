@@ -18,5 +18,7 @@ vim.o.inccommand = "split"
 vim.o.cursorline = true
 vim.o.scrolloff = 10
 
+vim.o.winborder = "rounded"
+
 vim.g.mapleader = " "
 vim.g.have_nerd_font = true
