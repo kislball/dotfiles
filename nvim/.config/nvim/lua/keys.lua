@@ -1,3 +1,5 @@
+vim.keymap.del("n", "grr")
+
 vim.keymap.set("n", "<leader><leader>", MiniFiles.open, {
 	desc = "Open file picker",
 })

@@ -29,6 +29,7 @@ local servers = {
 	"stylelint_lsp",
 	"vue_ls",
 	"vtsls",
+	"clangd",
 }
 
 for _, server in ipairs(servers) do
