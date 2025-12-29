@@ -10,5 +10,6 @@ package_urls = {
 	{ src = "https://github.com/stevearc/dressing.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
 	{ src = "https://github.com/rebelot/kanagawa.nvim" },
+	{ src = "https://codeberg.org/mfussenegger/nvim-dap.git" },
 	-- { src = "https://github.com/shaunsingh/nord.nvim" },
 }

@@ -28,6 +28,10 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", {
 	desc = "Open terminal",
 })
 
+vim.keymap.set("n", "<leader>td", ":colorscheme kanagawa<CR>", { desc = "Kanagawa" })
+
+vim.keymap.set("n", "<leader>tw", ":colorscheme kanagawa-lotus<CR>", { desc = "Kanagawa Wave" })
+
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {
 	desc = "Go to definition",
 })
@@ -67,6 +71,22 @@ vim.keymap.set("n", "<leader>g", "<cmd>Pick grep live<CR><CR>", {
 
 vim.keymap.set("n", "<leader>b", "<cmd>Pick buffers<CR>", {
 	desc = "Open buffers picker",
+})
+
+vim.keymap.set("n", "<leader>od", "<cmd>DapToggleBreakpoint<CR>", {
+	desc = "Add debug point",
+})
+
+vim.keymap.set("n", "<leader>oj", "<cmd>DapStepOver<CR>", {
+	desc = "Step over",
+})
+
+vim.keymap.set("n", "<leader>ol", "<cmd>DapStepInto<CR>", {
+	desc = "Step into",
+})
+
+vim.keymap.set("n", "<leader>oo", require("dap").repl.open, {
+	desc = "REPL",
 })
 
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", {

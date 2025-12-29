@@ -5,7 +5,7 @@
 # Run Sketchybar together with AeroSpace
 # sketchbar has a built-in detection of already running process,
 # so it won't be run twice on AeroSpace restart
-after-startup-command = ['exec-and-forget sketchybar']
+# after-startup-command = ['exec-and-forget sketchybar']
 
 # Notify Sketchybar about workspace change
 exec-on-workspace-change = [
@@ -15,7 +15,7 @@ exec-on-workspace-change = [
 ]
 
 # Start AeroSpace at login
-# start-at-login = true
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -64,7 +64,7 @@ inner.horizontal = 0
 inner.vertical = 0
 outer.left = 0
 outer.bottom = 0
-outer.top = [{ monitor."built-in" = 0 }, 33]
+outer.top = 0
 outer.right = 0
 
 # 'main' binding mode declaration

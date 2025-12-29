@@ -72,7 +72,8 @@ vim.lsp.enable(servers)
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
-		python = { "isort", "black" },
+		python = { "ruff" },
+		cpp = { "clang-format" },
 		rust = { "rustfmt", lsp_format = "fallback" },
 		javascript = { "prettierd" },
 		typescript = { "prettierd" },
