@@ -1,12 +1,4 @@
 require("mason").setup()
-local coq = require("coq")
-
-vim.g.coq_settings = {
-	auto_start = "shut-up",
-	completion = {
-		skip_after = { "[", "]", "{", "}", " " },
-	},
-}
 
 local servers = {
 	"ansiblels",
@@ -18,9 +10,11 @@ local servers = {
 	"pylsp",
 	"rust_analyzer",
 	"sqlls",
+	"pest_language_server",
 	"tailwindcss",
 	"svelte",
 	"texlab",
+	"tectonic",
 	"eslint",
 	"zls",
 	"gdscript",
@@ -30,11 +24,12 @@ local servers = {
 	"vue_ls",
 	"vtsls",
 	"clangd",
+	"ocamllsp",
 }
 
-for _, server in ipairs(servers) do
-	vim.lsp.config(server, coq.lsp_ensure_capabilities())
-end
+-- for _, server in ipairs(servers) do
+-- 	vim.lsp.config(server, coq.lsp_ensure_capabilities())
+-- end
 
 local vue_language_server_path = vim.fn.expand("$MASON/packages")
 	.. "/vue-language-server"
@@ -74,6 +69,7 @@ require("conform").setup({
 		lua = { "stylua" },
 		python = { "ruff" },
 		cpp = { "clang-format" },
+		c = { "clang-format" },
 		rust = { "rustfmt", lsp_format = "fallback" },
 		javascript = { "prettierd" },
 		typescript = { "prettierd" },
@@ -81,5 +77,8 @@ require("conform").setup({
 		vue = { "prettierd" },
 		go = { "gofmt" },
 		gdscript = { "gdformat" },
+		ocaml = { "ocamlformat" },
+		tex = { "tex-fmt" },
+		bib = { "bibtex-tidy" },
 	},
 })

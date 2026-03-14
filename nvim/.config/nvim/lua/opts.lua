@@ -8,6 +8,7 @@ vim.o.swapfile = false
 vim.o.showmode = false
 vim.o.breakindent = true
 vim.o.undofile = true
+vim.o.expandtab = true
 
 vim.o.ignorecase = true
 vim.o.smartcase = true

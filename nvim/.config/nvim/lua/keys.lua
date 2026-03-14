@@ -74,7 +74,15 @@ vim.keymap.set("n", "<leader>b", "<cmd>Pick buffers<CR>", {
 })
 
 vim.keymap.set("n", "<leader>od", "<cmd>DapToggleBreakpoint<CR>", {
-	desc = "Add debug point",
+	desc = "Toggle breakpoint",
+})
+
+vim.keymap.set("n", "<leader>oc", "<cmd>DapContinue<CR>", {
+	desc = "Start / continue",
+})
+
+vim.keymap.set("n", "<leader>ox", "<cmd>DapTerminate<CR>", {
+	desc = "Terminate session",
 })
 
 vim.keymap.set("n", "<leader>oj", "<cmd>DapStepOver<CR>", {
@@ -85,10 +93,27 @@ vim.keymap.set("n", "<leader>ol", "<cmd>DapStepInto<CR>", {
 	desc = "Step into",
 })
 
-vim.keymap.set("n", "<leader>oo", require("dap").repl.open, {
-	desc = "REPL",
+vim.keymap.set("n", "<leader>ok", "<cmd>DapStepOut<CR>", {
+	desc = "Step out",
 })
 
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", {
 	desc = "Leave terminal mode",
 })
+
+vim.keymap.set({ "n", "x" }, "<leader>za", function()
+	require("opencode").ask("@this: ", { submit = true })
+end, { desc = "Ask opencode…" })
+vim.keymap.set({ "n", "x" }, "<leader>zr", function()
+	require("opencode").select()
+end, { desc = "Execute opencode action…" })
+vim.keymap.set({ "n", "t" }, "<leader>zt", function()
+	require("opencode").toggle()
+end, { desc = "Toggle opencode" })
+
+vim.keymap.set({ "n", "x" }, "<leader>zc", function()
+	return require("opencode").operator("@this ")
+end, { desc = "Add range to opencode", expr = true })
+vim.keymap.set("n", "<leader>zl", function()
+	return require("opencode").operator("@this ") .. "_"
+end, { desc = "Add line to opencode", expr = true })
